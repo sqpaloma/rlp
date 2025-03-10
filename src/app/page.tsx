@@ -157,7 +157,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             Especialistas em Climatização e Proteção Contra Incêndios para Todas as Obras
           </h1>
-          <p className="text-red-700 mb-16">
+          <p className="text-red-700 mb-8">
             Há 27 anos, entregamos projetos eficientes e seguros para garantir conforto térmico e proteção contra
             incêndios em sua obra.
           </p>
