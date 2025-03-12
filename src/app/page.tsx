@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
+import BenefitsSection from "../components/benefits-section"
 
 const carouselImages = [
   {
@@ -157,7 +158,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             Especialistas em Climatização e Proteção Contra Incêndios para Todas as Obras
           </h1>
-          <p className="text-red-700 mb-8">
+          <p className="text-g-700 mb-16">
             Há 27 anos, entregamos projetos eficientes e seguros para garantir conforto térmico e proteção contra
             incêndios em sua obra.
           </p>
@@ -260,90 +261,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="bg-gray-100 py-12 md:py-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
-            Evite custos elevados com climatização ineficiente e falhas na proteção contra incêndios
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-4xl mx-auto">
-            A RLP Engenharia resolve esses desafios com soluções eficientes e seguras para climatização, pressurização
-            de escadas e detecção de incêndios. Há 27 anos, garantimos conforto térmico e proteção para obras de todos
-            os portes.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 mb-4 rounded-lg overflow-hidden relative">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Sistema de climatização"
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Climatização de ambientes</h3>
-                <p className="text-gray-600 text-sm">
-                  Projetos e instalações de sistemas de ar-condicionado para garantir conforto e eficiência energética.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 mb-4 rounded-lg overflow-hidden relative">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Sistema de pressurização de escadas"
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Pressurização de escadas</h3>
-                <p className="text-gray-600 text-sm">
-                  Soluções para segurança contra incêndios, garantindo a evacuação segura em emergências.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 mb-4 rounded-lg overflow-hidden relative">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Sistema de detecção de incêndio"
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Detecção e alarme de incêndio</h3>
-                <p className="text-gray-600 text-sm">
-                  Sistemas inteligentes para monitoramento e prevenção de incêndios.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 mb-4 rounded-lg overflow-hidden relative">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Manutenção preventiva"
-                  fill
-                  className="object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Manutenção preventiva e corretiva</h3>
-                <p className="text-gray-600 text-sm">
-                  Otimizar o desempenho e a durabilidade dos sistemas prevenindo falhas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <BenefitsSection />
+      
       {/* Excellence Section */}
       <section className="py-12 md:py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -361,7 +280,7 @@ export default function Home() {
             </div>
             <div className="w-full md:w-3/5 md:pl-12">
               <div className="inline-block px-4 py-2 bg-blue-50 rounded-full text-blue-600 text-sm font-medium mb-4">
-                Desde 1995
+                Desde 1998
               </div>
               <h2 className="text-3xl font-bold mb-6">Excelência em Engenharia e Compromisso com Resultados</h2>
               <p className="text-gray-600 mb-6">
