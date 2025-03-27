@@ -182,57 +182,8 @@ export default function BlogPage() {
   const remainingPosts = filteredPosts.length > 1 ? filteredPosts.slice(1) : []
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header/Navigation */}
-      <header className="py-4 px-6 md:px-12 flex items-center justify-between bg-white border-b border-gray-200">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/RLPcrop1transparente-1024x235-KD4yuv86E6ME2NgUX3WPLvovkNomud.png"
-              alt="RLP Engenharia Logo"
-              width={205}
-              height={47}
-              className="h-12 w-auto"
-            />
-          </Link>
-        </div>
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-gray-600 hover:text-blue-600">
-            Início
-          </Link>
-          <Link href="/sobre" className="text-gray-600 hover:text-blue-600">
-            Sobre
-          </Link>
-          <Link href="/servicos" className="text-gray-600 hover:text-blue-600">
-            Serviços
-          </Link>
-          <Link href="/#contato" className="text-gray-600 hover:text-blue-600">
-            Contato
-          </Link>
-          <Link href="/blog" className="text-blue-600 font-medium">
-            Blog
-          </Link>
-          <a
-            href="https://wa.me/5511985782307?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
-          >
-            Orçamento
-          </a>
-        </nav>
-        <button className="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </header>
+    
+      
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Blog Header */}
@@ -334,77 +285,5 @@ export default function BlogPage() {
         )}
       </div>
 
-      {/* Footer */}
-      <footer className="py-8 px-6 md:px-12 bg-white border-t border-gray-100 mt-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/RLPcrop1transparente-1024x235-KD4yuv86E6ME2NgUX3WPLvovkNomud.png"
-              alt="RLP Engenharia Logo"
-              width={150}
-              height={35}
-              className="h-10 w-auto"
-            />
-          </div>
-          <div className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} RLP Engenharia. Todos os direitos reservados.
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mt-8">
-          <div>
-            <h3 className="font-semibold mb-4">Contato</h3>
-            <p className="text-gray-600 text-sm">Endereço: Rua Lorem Ipsum, 123 - São Paulo, SP</p>
-            <p className="text-gray-600 text-sm">Telefone: (11) 1234-5678</p>
-            <p className="text-gray-600 text-sm">Email: contato@rlpengenharia.com.br</p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Serviço</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/servicos#climatizacao" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Climatização
-                </Link>
-              </li>
-              <li>
-                <Link href="/servicos#pressurizacao" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Pressurização de Escadas
-                </Link>
-              </li>
-              <li>
-                <Link href="/servicos#deteccao" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Detecção de Incêndio
-                </Link>
-              </li>
-              <li>
-                <Link href="/servicos#manutencao" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Manutenção
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Redes Sociais</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm">
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </div>
   )
 }
-

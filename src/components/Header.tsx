@@ -1,9 +1,14 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
+  const pathname = usePathname()
+  console.log(pathname)
+
   return (
-    <header className="py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200">
+    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200 bg-white shadow-sm">
       <div className="flex items-center">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/RLPcrop1transparente-1024x235-KD4yuv86E6ME2NgUX3WPLvovkNomud.png"
@@ -14,20 +19,49 @@ export default function Header() {
         />
       </div>
       <nav className="hidden md:flex items-center space-x-8">
-        <Link href="/" className="text-blue-600 font-medium">
+        <Link 
+          href="/" 
+          className={`relative text-blue-600 font-medium ${
+            pathname === "/" ? "active" : ""
+          }`}
+        >
           Início
+         
         </Link>
-        <Link href="/sobre" className="text-gray-600 hover:text-blue-600">
+        <Link 
+          href="/sobre" 
+          className={`relative text-gray-600 hover:text-blue-600 ${
+            pathname === "/sobre" ? "text-blue-600 font-medium underline" : ""
+          }`}
+        >
           Sobre
+         
         </Link>
-        <Link href="/servicos" className="text-gray-600 hover:text-blue-600">
+        <Link 
+          href="/servicos" 
+          className={`relative text-gray-600 hover:text-blue-600 ${
+            pathname === "/servicos" ? "text-blue-600 font-medium" : ""
+          }`}
+        >
           Serviços
+         
         </Link>
-        <a href="#contato" className="text-gray-600 hover:text-blue-600">
+        <a 
+          href="#contato" 
+          className="relative text-gray-600 hover:text-blue-600"
+        >
           Contato
         </a>
-        <Link href="/blog" className="text-gray-600 hover:text-blue-600">
+        <Link 
+          href="/blog" 
+          className={`relative text-gray-600 hover:text-blue-600 ${
+            pathname === "/blog" ? "text-blue-600 font-medium" : ""
+          }`}
+        >
           Blog
+          {pathname === "/blog" && (
+            <div className="absolute bottom-[-12px] left-0 w-full h-1 bg-blue-600 rounded-t-md"></div>
+          )}
         </Link>
         <a
           href="https://wa.me/5511985782307?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
