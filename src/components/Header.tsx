@@ -2,13 +2,33 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react"
 
 export default function Header() {
   const pathname = usePathname()
-  console.log(pathname)
+  const [activeItem, setActiveItem] = useState(pathname)
+
+  useEffect(() => {
+    setActiveItem(pathname)
+  }, [pathname])
+
+  // Define constants for link styles
+  const LINK_STYLES = {
+    base: "hover:text-blue-600",
+    active: "text-red-600 font-medium underline"
+  }
+
+  // Navigation items with their paths
+  const navItems = [
+    { path: "/", label: "Início" },
+    { path: "/sobre", label: "Sobre" },
+    { path: "/servicos", label: "Serviços" },
+    { path: "#contato", label: "Contato", alwaysInactive: true },
+    { path: "/blog", label: "Blog" }
+  ]
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-gray-200 bg-white shadow-sm">
+    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-blue-200 bg-white shadow-sm">
       <div className="flex items-center">
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/RLPcrop1transparente-1024x235-KD4yuv86E6ME2NgUX3WPLvovkNomud.png"
@@ -19,50 +39,16 @@ export default function Header() {
         />
       </div>
       <nav className="hidden md:flex items-center space-x-8">
-        <Link 
-          href="/" 
-          className={`relative text-blue-600 font-medium ${
-            pathname === "/" ? "active" : ""
-          }`}
-        >
-          Início
-         
-        </Link>
-        <Link 
-          href="/sobre" 
-          className={`relative text-gray-600 hover:text-blue-600 ${
-            pathname === "/sobre" ? "text-blue-600 font-medium underline" : ""
-          }`}
-        >
-          Sobre
-         
-        </Link>
-        <Link 
-          href="/servicos" 
-          className={`relative text-gray-600 hover:text-blue-600 ${
-            pathname === "/servicos" ? "text-blue-600 font-medium" : ""
-          }`}
-        >
-          Serviços
-         
-        </Link>
-        <a 
-          href="#contato" 
-          className="relative text-gray-600 hover:text-blue-600"
-        >
-          Contato
-        </a>
-        <Link 
-          href="/blog" 
-          className={`relative text-gray-600 hover:text-blue-600 ${
-            pathname === "/blog" ? "text-blue-600 font-medium" : ""
-          }`}
-        >
-          Blog
-          {pathname === "/blog" && (
-            <div className="absolute bottom-[-12px] left-0 w-full h-1 bg-blue-600 rounded-t-md"></div>
-          )}
-        </Link>
+        {navItems.map(item => (
+          <Link 
+            key={item.path} 
+            href={item.path} 
+            className={`${item.alwaysInactive ? LINK_STYLES.base : activeItem === item.path ? LINK_STYLES.active : LINK_STYLES.base}`}
+            style={activeItem === item.path && !item.alwaysInactive ? { color: '#dc2626' } : {}}
+          >
+            {item.label}
+          </Link>
+        ))}
         <a
           href="https://wa.me/5511985782307?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
           target="_blank"
