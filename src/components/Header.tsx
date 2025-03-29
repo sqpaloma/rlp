@@ -24,7 +24,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-blue-200 bg-white shadow-sm">
+    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-blue-2 00 bg-white shadow-sm">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -44,8 +44,8 @@ export default function Header() {
             key={path} 
             href={path} 
             className={clsx(
-              "text-gray-600 hover:text-blue-600 transition-colors",
-              pathname === path && "text-blue-600 font-medium underline underline-offset-[16px] underline-decoration-[3px]"
+             pathname !== path && "text-gray-600 hover:text-blue-600 transition-colors",
+              pathname === path && "text-blue-600 underline underline-offset-[12px] decoration-[3px] decoration-blue-600"
             )}
           >
             {label}
