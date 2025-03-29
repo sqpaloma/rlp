@@ -20,11 +20,6 @@ const NAV_ITEMS: NavItem[] = [
 const LOGO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/RLPcrop1transparente-1024x235-KD4yuv86E6ME2NgUX3WPLvovkNomud.png"
 const WHATSAPP_URL = "https://wa.me/5511985782307?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
 
-const navStyles = {
-  base: "hover:text-blue-600 transition-colors",
-  active: "text-blue-600 font-medium underline-offset-4"
-} as const
-
 export default function Header() {
   const pathname = usePathname()
 
@@ -49,8 +44,8 @@ export default function Header() {
             key={path} 
             href={path} 
             className={clsx(
-              navStyles.base,
-              pathname === path && navStyles.active
+              "text-gray-600 hover:text-blue-600 transition-colors",
+              pathname === path && "text-blue-600 font-medium underline underline-offset-[16px] underline-decoration-[3px]"
             )}
           >
             {label}
