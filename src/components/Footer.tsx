@@ -64,10 +64,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-blue-600 text-sm flex items-center">
+                <Link href="/carreiras" className="text-gray-600 hover:text-blue-600 text-sm flex items-center">
                   Carreiras
                   <span className="ml-2 px-2 py-1 text-xs bg-blue-600 text-white rounded">CONTRATANDO</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

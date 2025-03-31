@@ -13,7 +13,7 @@ const NAV_ITEMS: NavItem[] = [
   { path: "/", label: "Início" },
   { path: "/sobre", label: "Sobre" },
   { path: "/servicos", label: "Serviços" },
-  { path: "#contato", label: "Contato" },
+  { path: "/contato", label: "Contato" },
   { path: "/blog", label: "Blog" }
 ]
 
@@ -24,7 +24,7 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-blue-2 00 bg-white shadow-sm">
+    <header className="sticky top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between border-b border-blue-200 bg-white shadow-sm">
       <div className="flex items-center">
         <Link href="/">
           <Image

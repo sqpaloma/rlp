@@ -17,7 +17,6 @@ const blogPosts = [
     author: {
       name: "RLP Engenharia",
       role: "Equipe Técnica",
-      avatar: "/placeholder.svg?height=100&width=100",
     },
     content: `
       <h2>A Essência da Manutenção Preventiva</h2>
@@ -130,13 +129,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <div className="flex items-center justify-center mb-12 space-x-8">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <Image
-                  src={post.author.avatar || "/placeholder.svg"}
-                  alt={post.author.name}
-                  width={48}
-                  height={48}
-                  className="object-cover"
-                />
+               
               </div>
               <div>
                 <p className="font-medium">{post.author.name}</p>
