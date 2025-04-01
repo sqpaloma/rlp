@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section className="flex items-start px-6 md:px-12 py-16 md:py-28 pt-24 bg-white max-w-7xl w-full mx-auto">
       
-        <div className="flex flex-col md:flex-row gap-12">
+        <div className="flex flex-col md:flex-row gap-48">
           <div className="w-full md:w-1/2">
             <div className="flex flex-col h-full">
               <h1 className="text-8xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
