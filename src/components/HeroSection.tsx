@@ -2,18 +2,22 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section className="flex items-start px-6 md:px-12 py-16 md:py-28 pt-24 bg-white max-w-7xl w-full mx-auto">
-      
-        <div className="flex flex-col md:flex-row gap-48">
-          <div className="w-full md:w-1/2">
-            <div className="flex flex-col h-full">
-              <h1 className="text-8xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-                Especialistas em Climatização e Proteção Contra Incêndios para Todas as Obras
-              </h1>
-              <p className="text-gray-600 text-lg mb-10">
-                Há 27 anos, entregamos projetos eficientes e seguros para garantir conforto térmico e proteção contra
-                incêndios em sua obra.
-              </p>
+    <section className="pt-32 pb-16 px-4">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-6">
+              Líder em Soluções de Engenharia
+            </div>
+            <h1 className="text-4xl md:text-6xl font-serif text-gray-900 mb-6">
+              Especialistas em Climatização e Proteção Contra Incêndios para Todas as Obras
+            </h1>
+            <p className="text-xl font-sans text-gray-600 mb-8">
+              Oferecemos serviços especializados em refrigeração industrial,
+              HVAC comercial, ventilação e pressurização de escadas para
+              construtoras e empreiteiras.
+            </p>
+            <div className="flex flex-wrap gap-4">
               <a
                 href="https://wa.me/5511985782307?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento"
                 target="_blank"
@@ -22,27 +26,26 @@ export default function HeroSection() {
               >
                 Fale com um Especialista
               </a>
+              <a
+                href="/servicos"
+                className="border border-gray-300 text-gray-700 px-6 py-3 hover:bg-gray-50 transition-colors"
+              >
+                Nossos Serviços
+              </a>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
-            <div className="h-full flex items-end">
-              <div className="w-full">
-                <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <div className="relative" style={{ height: "400px" }}>
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0348-w55GDjrlN3Fl9RW7vhKmuOQ1Kgv9I3.jpeg"
-                      alt="RLP Engenharia - Projeto de Climatização"
-                      fill
-                      className="object-cover rounded-xl"
-                      priority
-                    />
-                  </div>
-                </div>
+          <div className="relative">
+            <Image
+              src="/technician2.jpeg"
+              width={800}
+              height={600}
+              alt="Equipe da RLP Engenharia trabalhando em um projeto"
+              className="object-cover"
+              priority
+            />
               </div>
             </div>
-          </div>
-        </div>
-      
+      </div>
     </section>
-  )
+  );
 }
