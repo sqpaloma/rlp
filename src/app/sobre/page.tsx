@@ -18,10 +18,10 @@ export default function SobrePage() {
                 A RLP Engenharia foi fundada em 1998 pelo engenheiro Reinaldo Luiz Pellegrini, que identificou uma
                 oportunidade no mercado de climatização e proteção contra incêndios. Com sua visão inovadora e
                 compromisso com a excelência técnica, a empresa iniciou suas atividades em um pequeno apartamento em São
-                Paulo, contando apenas com a sua esposa.
+                Paulo, contando apenas com a sua esposa Andreia Pellegrini.
               </p>
               <p className="text-gray-600 mb-4">
-                Em 2002, uma parceria estratégica foi firmada com seu grande amigo Waldemar Cençom, marcando o início de
+                Em 2002, uma parceria estratégica foi firmada com o Engenheiro Waldemar Cençom, marcando o início de
                 uma fase de expansão. Ao longo dos anos, a RLP Engenharia ampliou sua atuação para diversas cidades do
                 estado de São Paulo, como Campinas e Guarujá, consolidando-se como referência em soluções de engenharia
                 para climatização e segurança. Hoje, nossa carteira de clientes inclui algumas das maiores construtoras
