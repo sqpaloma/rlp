@@ -1,53 +1,59 @@
 import { Building2, ShieldCheck, Zap } from "lucide-react"
 
+const features = [
+  {
+    icon: Zap,
+    title: "Climatização eficiente",
+    description:
+      "Projetos de ar condicionado que garantem conforto térmico com baixo consumo energético, adaptados às necessidades específicas de cada ambiente.",
+  },
+  {
+    icon: Building2,
+    title: "Pressurização de escadas",
+    description:
+      "Sistemas que garantem rotas de fuga seguras em caso de incêndio, atendendo às normas técnicas e requisitos legais para edificações.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Proteção contra incêndios",
+    description:
+      "Soluções completas de detecção e alarme que identificam precocemente situações de risco, protegendo vidas e patrimônio com tecnologia avançada.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Proteção contra incêndios",
+    description:
+      "Soluções completas de detecção e alarme que identificam precocemente situações de risco, protegendo vidas e patrimônio com tecnologia avançada.",
+  },
+]
+
 export default function BenefitsSection() {
-  const features = [
-    {
-      icon: <Zap className="w-7 h-7 text-blue-600" />,
-      title: "Climatização eficiente",
-      description:
-        "Projetos de ar condicionado que garantem conforto térmico com baixo consumo energético, adaptados às necessidades específicas de cada ambiente.",
-    },
-    {
-      icon: <Building2 className="w-7 h-7 text-blue-600" />,
-      title: "Pressurização de escadas",
-      description:
-        "Sistemas que garantem rotas de fuga seguras em caso de incêndio, atendendo às normas técnicas e requisitos legais para edificações.",
-    },
-    {
-      icon: <ShieldCheck className="w-7 h-7 text-blue-600" />,
-      title: "Proteção contra incêndios",
-      description:
-        "Soluções completas de detecção e alarme que identificam precocemente situações de risco, protegendo vidas e patrimônio com tecnologia avançada.",
-    },
-  ]
-
   return (
-    <section className="relative px-6 -mt-20 mb-20">
-      <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16">
-        <div className="flex flex-col md:flex-row gap-16 mb-16">
-      <div className="w-full md:w-1/2">
-        <div className="text-blue-600 font-medium mb-4">SOLUÇÕES COMPLETAS</div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Experiência que cresce com seu projeto.
-        </h2>
-      </div>
-      <div className="w-full md:w-1/2">
-        <p className="text-lg text-gray-600">
-          Desenvolvemos projetos personalizados de climatização e proteção contra incêndios que se adaptam às
-          necessidades específicas da sua obra, garantindo eficiência e segurança.
-        </p>
-      </div>
-    </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {features.map((feature, index) => (
-              <div key={index}>
-              <div className="w-14 h-14 flex items-center justify-center border-2 border-gray-200 rounded-md mb-6">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+    <section className="px-6 mb-12 sm:px-6 lg:px-8">
+      <div className="mx-auto">
+        <div className="bg-gray-100 rounded-2xl shadow-xl p-8 md:p-12 md:mx-12">
+          {/* Cabeçalho da seção */}
+          <div className="flex flex-col md:flex-row gap-10 mb-10">
+            <div className="md:w-1/2">
+              <div className="text-blue-600 font-medium mb-3">SOLUÇÕES COMPLETAS</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                Experiência que cresce com seu projeto.
+              </h2>
             </div>
+            <div className="md:w-1/2">
+            </div>
+          </div>
+
+          {/* Blocos com os benefícios */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {features.map(({ icon: Icon, title, description }, index) => (
+              <div key={index}>
+                <div className="w-12 h-12 flex items-center justify-center rounded-md mb-4">
+                  <Icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                <p className="text-gray-600 text-sm">{description}</p>
+              </div>
             ))}
           </div>
         </div>
